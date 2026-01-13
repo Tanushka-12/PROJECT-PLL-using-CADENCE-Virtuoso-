@@ -1,0 +1,26 @@
+PLL ARCHITECTURE AND BLOCK LEVEL DESCRIPTION :
+A Phase Locked Loop (PLL) is built from several interconnected blocks, each playing a specific role in achieving stable and synchronized clock generation. The following sections briefly describe the function of each block used in this design.
+
+Phase / Frequency Detector (PFD):
+The phase and frequency detector compares the reference clock with the feedback clock from the output. It determines whether the output clock is leading or lagging and generates control signals accordingly.
+This block acts as the decision-making element of the PLL and initiates correction whenever a mismatch is detected.
+
+Charge Pump
+The charge pump converts the digital output of the phase detector into an analog signal. Based on the phase error, it either injects or removes charge from the loop filter. This process translates timing
+differences into voltage changes that can control the oscillator.
+
+Loop Filter
+The loop filter smooths the output of the charge pump and removes unwanted high-frequency components. It plays a crucial role in stabilizing the PLL by controlling how fast the system responds to changes.
+The loop filter directly affects lock time, jitter, and overall stability.
+
+Voltage Controlled Oscillator (VCO)
+The voltage controlled oscillator generates the output clock of the PLL. Its frequency changes in response to the control voltage coming from the loop filter. The VCO continuously adjusts its frequency until the
+output clock aligns with the reference clock, achieving phase lock.
+
+Frequency Divider
+The frequency divider scales down the VCO output frequency before feeding it back to the phase detector. This allows the PLL to generate output frequencies that are multiples of the reference clock. By changing the
+division ratio, different output frequencies can be synthesized.
+
+Feedback Loop
+The feedback path connects the output of the PLL back to the phase detector. This closed-loop structure allows the PLL to continuously monitor and correct its output, ensuring long-term stability and 
+synchronization.
