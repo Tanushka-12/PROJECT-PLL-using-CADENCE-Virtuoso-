@@ -1,0 +1,18 @@
+A PLL (Phase-Locked Loop) in Cadence refers to the design, simulation, and analysis of this crucial feedback circuit, essential for clock generation, frequency synthesis, and synchronization in electronics,
+using Cadence's powerful tools like Spectre for detailed mixed-signal simulations, including PSS/Pnoise for phase noise and transient analysis for lock time and stability, often breaking down the design into
+components like PFD, Loop Filter, and VCO for characterization before full system simulation. 
+
+Applications in Cadence
+Clock Generation: Creating stable, high-frequency clocks for digital systems.
+Frequency Synthesis: Generating precise frequencies for wireless communication (RF circuits).
+Data Recovery: Recovering clock/timing from noisy data streams. 
+
+This project involves the complete design and verification of a Phase Locked Loop (PLL) using Cadence Virtuoso in TSMC 180 nm CMOS technology.
+
+The PLL was implemented at transistor level, starting from schematic design of individual blocks such as the phase detector, charge pump, loop filter, voltage-controlled oscillator, and frequency divider. 
+Each block was designed carefully to ensure correct functionality and stable operation.
+After schematic design, functional simulations were performed to verify phase locking behavior, frequency multiplication, and steady-state operation. The design was then converted into a symbol, enabling
+hierarchical simulation and easy reuse of the PLL as a system-level block.
+Physical verification was also carried out. Design Rule Check (DRC) was performed to ensure the layout follows all foundry rules, and Layout Versus Schematic (LVS) was used to confirm that the layout matches the
+intended schematic. Post-layout simulations were used to validate performance considering parasitic effects.
+Overall, this project demonstrates a complete custom VLSI design flow, from schematic and simulation to layout verification, highlighting practical understanding of analog/mixed-signal design using Cadence Virtuoso.
